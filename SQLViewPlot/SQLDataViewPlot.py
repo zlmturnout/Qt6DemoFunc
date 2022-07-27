@@ -95,7 +95,7 @@ class SqlCustomTableModel(QSqlTableModel):
 		return resp
 
 
-class VieWDataCovid19SH(QWidget,Ui_Dialog):
+class VieWSQLiteData(QWidget,Ui_Dialog):
 	"""View Covid19 data in ShangHai@2022
 
 	data start from 2022-03-01
@@ -381,6 +381,6 @@ class VieWDataCovid19SH(QWidget,Ui_Dialog):
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
-	win = VieWDataCovid19SH()
+	win = VieWSQLiteData()
 	win.show()
 	sys.exit(app.exec())
