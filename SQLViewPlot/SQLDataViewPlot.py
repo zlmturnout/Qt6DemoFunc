@@ -95,13 +95,13 @@ class SqlCustomTableModel(QSqlTableModel):
 		return resp
 
 
-class VieWSQLiteData(QWidget,Ui_Dialog):
+class ViewSQLiteData(QWidget,Ui_Dialog):
 	"""View Covid19 data in ShangHai@2022
 
 	data start from 2022-03-01
 	"""
 	def __init__(self, *args, **kwargs):
-		super(VieWDataCovid19SH, self).__init__()
+		super(ViewSQLiteData, self).__init__()
 		self.setupUi(self)
 		self.setWindowTitle("View SQLite Data")
 		self.Covid19Data=pd.DataFrame()
@@ -381,6 +381,6 @@ class VieWSQLiteData(QWidget,Ui_Dialog):
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
-	win = VieWSQLiteData()
+	win = ViewSQLiteData()
 	win.show()
 	sys.exit(app.exec())
